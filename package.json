@@ -7,9 +7,6 @@
     "start": "concurrently \"ng serve\" \"npm run static-server\"",
     "static-server": "cd WebComponentsPolymer && cd Polymer && static -H '{\"Access-Control-Allow-Origin\": \"*\"}'",
     "build": "ng build",
-    "build-elements": "ng build --aot --prod --bo --vendor-chunk=false --common-chunk=false --app \"Elements\" --base-href=\".\"",
-    "start-elements": "npm run build-elements && npm run static-server-elements",
-    "static-server-elements": "cd distAngularElement && static",
     "polymer": "cd WebComponentsPolymer && cd Polymer && polymer serve",
     "test": "ng test",
     "lint": "ng lint",
@@ -43,6 +40,7 @@
     "codelyzer": "~4.2.1",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "@angular-devkit/build-angular": "~0.5.0"
   }
 }
